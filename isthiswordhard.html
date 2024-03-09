@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Comprehension Test</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 8px;
+  margin: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Is this word hard to comprehend?</h1>
+  <input type="text" id="wordInput" placeholder="Enter a word">
+  <button onclick="testComprehension()">Test</button>
+</div>
+<script>
+function isHardToComprehend(string) {
+  if (string.length > 9) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function testComprehension() {
+  var input = document.getElementById("wordInput").value;
+  var result = isHardToComprehend(input);
+  alert(result);
+}
+</script>
+</body>
+</html>
